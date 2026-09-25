@@ -1,0 +1,117 @@
+/* my basic css reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*color options*/
+:root {
+    --primary-color: #f8f8ff;
+    --secondary-color: #f8f8ff;
+    --text-color: #333333;
+}
+
+/*Base styles*/
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white;
+    color: var(--text-color);
+
+    min-height: 50vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+        "header navigation"
+        "main main"
+        "footer footer";
+
+        gap: 20px;
+
+        padding: 20px;
+}
+
+/*header*/
+.header {
+    grid-area: header;
+}
+
+/*main content*/
+.main-content {
+    grid-area: main;
+    
+}
+
+/*Introduction*/
+.introduction {
+    background-color: white;
+    padding: 20px;
+
+}
+
+/*Navigation*/
+.navigation {
+    grid-area: navigation;
+    align-self: start;
+    justify-self: end;
+}
+
+/*navigation*/
+.navigation ul {
+    list-style: none;
+
+    display: flex;
+    gap: 20px;
+}
+
+.navigation li {
+    margin-bottom: 0;
+}
+
+.navigation a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: white;
+    padding: 20px;
+}
+
+.footer ul {
+    margin-bottom: 20px;
+}
+
+
+/*Typography styles for headings*/
+h1 {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
