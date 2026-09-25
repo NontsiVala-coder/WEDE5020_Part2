@@ -7,19 +7,22 @@
 
 /*color options*/
 :root {
-    --primary-color: #f8f8ff;
-    --secondary-color: #f8f8ff;
+    --primary-color: #faf0e6;
+    --secondary-color: #f8f5e9;
+    --accent-color: #f2c94c;
+    --donate-color: #d95d39;
     --text-color: #333333;
+    --white-color: #ffffff;
 }
 
-/*Base styles*/
+/*Base/body layout*/
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: white;
     color: var(--text-color);
 
-    min-height: 50vh;
+    min-height: 100vh;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -37,29 +40,31 @@ body {
 /*header*/
 .header {
     grid-area: header;
-}
 
-/*main content*/
-.main-content {
-    grid-area: main;
-    
-}
+    background-color: var(--primary-color);
+    color: var(--text-color);
 
-/*Introduction*/
-.introduction {
-    background-color: white;
     padding: 20px;
 
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
+
+
 
 /*Navigation*/
 .navigation {
     grid-area: navigation;
     align-self: start;
     justify-self: end;
+    background-color: var(--white-color);
+    padding: 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    
 }
 
-/*navigation*/
 .navigation ul {
     list-style: none;
 
@@ -74,12 +79,80 @@ body {
 .navigation a {
     color: var(--text-color);
     text-decoration: none;
+    padding: 8px 12px;
+
+    border-radius: 5px;
 }
 
+.navigation a:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+
+.navigation a:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+.navigation a.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+
+/*donate link*/
+.donate-link a {
+    background-color: var(--donate-color);
+    color: var(--white-color);
+
+}
+
+.donate-link a:hover {
+    background-color: #b84728;
+}
+
+
+/*main content*/
+.main-content {
+    grid-area: main;
+    
+}
+
+/*Introduction*/
+.introduction {
+    background-color: var(--white-color);
+    padding: 20px;
+
+    border: 2px solid var(--accent-color);
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.introduction img {
+    border: 3px solid var(--accent-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/*footer*/
 .footer {
     grid-area: footer;
-    background-color: white;
-    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 25px;
+    border-top: 5px solid var(--accent-color);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer img {
+    border: 3px solid var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .footer ul {
